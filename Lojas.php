@@ -12,18 +12,28 @@
 			}
 
 
+
+
+$SQL="SELECT * FROM Loja" ;
+
+
+if ($resultado=mysqli_query($ligacao,$SQL))
+		{
+			$num=mysqli_num_rows($resultado);
+			$i = 0;
+			while($tuplo = mysqli_fetch_array($resultado)) {
+				$ID_Loja[$i] 				= $tuplo["ID_Loja"];
+				$Morada[$i] 				= $tuplo["Morada"];
+				$NumTelefone[$i] 			= $tuplo["NumTelefone"];
+				$i=$i+1;
+			}
+		}
+		else {
+			echo "ardeu<br />";
+		}
+		
+		mysqli_close($ligacao);
 ?>
-ssss
-
-
-
-
-
-
-
-
-
-
 
 <html lang="en">
   <head>
@@ -45,11 +55,31 @@ ssss
     <![endif]-->
   </head>
   <body>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nome da Loja</th>
+							<th>Morada</th>
+							<th>Nº Telefone</th>
+						</tr>
+					</thead>
+					<tbody>
+				<?php
+						$j=0;
+						while($j<$i){
+						echo '
+						<tr>
+							<td> ' .$ID_Loja[$j]. ' </td>
+							<td> ' .$Morada[$j] . ' </td>
+							<td> ' .$NumTelefone[$j]. ' </td>
+						</tr>';
+						$j++;
+						}
+				?>
+					</tbody>
+				</table>
 
-
-
-
-  ul class="site-footer-links">
+ 
       <li>© 2017 <span title="">Stand Rodas & Motores José Lourenço & João Marques</span>, Inc.</li>
     </ul>
 	
