@@ -105,8 +105,12 @@
       <tr>
         <th>Matricula</th>
         <th>Modelo</th>
+		<th>Tipo</th>
         <th>NumerodeLugares</th>
 		<th>Combustivel</th>
+		<th>Quilómetros</th>
+		<th>Ano</th>
+		<th>Preço</th>
       </tr>
     </thead>
     <tbody>
@@ -117,8 +121,12 @@
 			<tr>
 				<td> ' .$Matricula[$j]. ' </td>
 				<td> ' .$Modelo[$j]. ' </td>
+				<td> ' .$Tipo[$j]. ' </td>
 				<td> ' .$NumLugares[$j]. ' </td>
 				<td> ' .$CombustiveI[$j]. ' </td>
+				<td> ' .$Quilometros[$i]. ' </td>
+				<td> ' .$PrimeiroRegisto[$i]. ' </td>
+				<td> ' .$Preco[$j]. ' </td>
       		</tr>';
 			$j++;
 		}
