@@ -42,8 +42,8 @@
 					</div>
 
 					<div class="form-group">
-						<label for="NºLugares">NºLugares</label>
-						<input type="text" class="form-control" id="NºLugares" name="NºLugares">
+						<label for="Tipo">Tipo</label>
+						<input type="text" class="form-control" id="Tipo" name="Tipo">
 					</div>
 
 					<div class="form-group">
@@ -51,7 +51,7 @@
 						<input type="text" class="form-control" id="Combustivel" name="Combustivel">
 					</div>
 
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default">Pesquisa</button>
 				</form>  
 			</div>
 

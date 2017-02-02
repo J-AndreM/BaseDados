@@ -1,50 +1,36 @@
 <?php
-        $MarcaCarro = $_POST["Marca"];
+        $MarcaMota = $_POST["Marca"];
 		if($_POST["Modelo"]!=NULL)
-        	$ModeloCarro = $_POST["Modelo"];
+        	$ModeloMota = $_POST["Modelo"];
 		else
-			$ModeloCarro = "%";
-		if($_POST["Tipo"]!=NULL)
-        	$TipoCarro = $_POST["Tipo"];
-		else
-			$TipoCarro = "%";
-		if($_POST["Combustivel"]!=NULL)
-        	$Combustivel = $_POST["Combustivel"];
-		else
-			$Combustivel = "%";
+			$ModeloMota = "%";
+		
 		$username = "2012145811";
 		$password = "2012145811";
 		$basedados = "bd_2012145811";
 		$servidor = "delta.deec.uc.pt";
-
-
-	//	$ligacao=mysqli_connect($servidor,$username,$password);
-	//	@mysql_select_db($ligacao,$basedados) or die( "Não foi possível obter a ligação à Base de Dados");
+		
 	
 		$ligacao=mysqli_connect($servidor,$username,$password,$basedados);
 		if (mysqli_connect_errno())
-			{
+		{
 			echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			}
-
-		$SQL="SELECT * FROM Carro WHERE ID_Marca = '$MarcaCarro' AND Modelo LIKE '$ModeloCarro' AND Tipo LIKE '$TipoCarro' AND Combustivel LIKE '$Combustivel'" ;
-
+		}
+		
+		
+		$SQL="SELECT * FROM Mota WHERE ID_Marca = '$MarcaMota' AND Modelo LIKE '$ModeloMota'";
+		
 		if ($resultado=mysqli_query($ligacao,$SQL))
 		{
 			$num=mysqli_num_rows($resultado);
 			$i = 0;
 			while($tuplo = mysqli_fetch_array($resultado)) {
-				$Matricula[$i] 			= $tuplo["Matricula"];
 				$Modelo[$i] 			= $tuplo["Modelo"];
-				$NumLugares[$i] 		= $tuplo["NumLugares"];
 				$PrimeiroRegisto[$i] 	= $tuplo["PrimeiroRegisto"];
 				$Cor[$i]				= $tuplo["Cor"];
-				$NumPortas[$i] 			= $tuplo["NumPortas"];
-				$Tipo[$i]				= $tuplo["Tipo"];
 				$Potencia[$i] 			= $tuplo["Potencia"];
 				$CombustiveI[$i] 		= $tuplo["Combustivel"];
 				$Quilometros[$i]		= $tuplo["Quilometros"];
-				$Cilindrada[$i] 		= $tuplo["Cilindrada"];
 				$Preco[$i] 				= $tuplo["Preco"];
 				$ID_Loja[$i] 			= $tuplo["ID_Loja"];
 				$ID_Marca[$i] 			= $tuplo["ID_Marca"];
@@ -57,8 +43,7 @@
 		mysqli_close($ligacao);
 		//echo "$MarcaCarro $ModeloCarro $NLugaresCarro $CombustivelCarro";
 ?>
-
-
+	
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -99,17 +84,16 @@
 			</div><!--/.nav-collapse -->
 	   </div>
 	</div>
- 
-  <table class="table table-striped">
+ 	
+	<table class="table table-striped">
     <thead>
       <tr>
-        <th>Matricula</th>
+        <th>Marca</th>
         <th>Modelo</th>
-		<th>Tipo</th>
-        <th>NumerodeLugares</th>
-		<th>Combustivel</th>
-		<th>Quilómetros</th>
 		<th>1ºRegisto</th>
+        <th>Cor</th>
+		<th>Potência</th>
+		<th>Quilómetros</th>
 		<th>Preço</th>
 		<th>Loja</th>
       </tr>
@@ -120,13 +104,12 @@
 		while($j<$i){
 			echo '
 			<tr>
-				<td> ' .$Matricula[$j]. ' </td>
+				<td> ' .$ID_Marca[$j] . ' </td>
 				<td> ' .$Modelo[$j]. ' </td>
-				<td> ' .$Tipo[$j]. ' </td>
-				<td> ' .$NumLugares[$j]. ' </td>
-				<td> ' .$CombustiveI[$j]. ' </td>
-				<td> ' .$Quilometros[$j]. ' </td>
 				<td> ' .$PrimeiroRegisto[$j]. ' </td>
+				<td> ' .$Cor[$j]. ' </td>
+				<td> ' .$Potencia[$j]. ' </td>
+				<td> ' .$Quilometros[$j]. ' </td>
 				<td> ' .$Preco[$j]. ' </td>
 				<td> ' .$ID_Loja[$j]. ' </td>
       		</tr>';
@@ -143,3 +126,4 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+		

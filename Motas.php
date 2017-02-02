@@ -20,33 +20,36 @@
   <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<a class="navbar-brand" href="#">Pesquisa de Motas:</a>
-    </div
+    </div>
 	
 	
- <<form>
- <div class="col-sm-4">
+			<div class="container">
  
- </div>
+				<div class="col-sm-4">
+				</div>
  
- <div class="col-sm-4">
- <div class="form-group">
-    <label for="Marca">Marca</label>
-    <input type="text" class="form-control" id="Marca" name="Marca">
-  </div>
-  <div class="form-group">
-    <label for="Modelo">Modelo</label>
-    <input type="text" class="form-control" id="Modelo" name="Modelo">
-  </div>
+				<div class="col-sm-4">
+					<form action="ResultadoMotas.php" method="POST">
+						<div class="form-group">
+							<label for="Marca">Marca</label>
+							<input type="text" class="form-control" id="Marca" name="Marca" required>
+						</div>
+						<div class="form-group">
+							<label for="Modelo">Modelo</label>
+							<input type="text" class="form-control" id="Modelo" name="Modelo">
+						</div>
   
- <a class="btn btn-default" href="#" role="button">Pesquisa</a>
- </div>
+						<button type="submit" class="btn btn-default">Pesquisa</button>
+				
+					</form> 
+				
+				</div>
  
 
- <div class="col-sm-4">
- </div>
-
- </form>  
-
-
+				<div class="col-sm-4">
+				</div>
+			
+			</div>
+  
  </body>
 </html>
