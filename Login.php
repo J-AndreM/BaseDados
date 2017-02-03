@@ -83,7 +83,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="http://alunos.deec.uc.pt/~a2012145811/Login.php" method="post" role="form" style="display: block;">
+								<form id="login-form" action="http://home.deec.uc.pt/~a2011156234/Login.php" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
@@ -106,6 +106,8 @@
 			<?php } ?>
 
 			<!-- Login Efectuado !-->
+			
+			
 
 			<?php
 				if(isset($_POST["username"]) && isset($loginbool) && $loginbool==TRUE){
@@ -114,9 +116,18 @@
 					<div class="alert alert-success">
 						<strong>Login Succefull!</strong> YES!
 					</div>
+					
+					<p> <a href="">Comprar</a></p>
+					<p> <a href="">Vender</a></p>
+					<p> <a href="AdicionarCarros.php">Adicionar Carros</a></p>
+					
 				</div>
 			<?php }?>
+			
 		</div>
-
+		
+		
+		
+		
 	</body>
 </html>
