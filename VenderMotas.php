@@ -38,12 +38,12 @@
 
 					<div class="form-group">
 						<label for="NIF">NIF</label>
-						<input type="text" class="form-control" id="NIF" name="NIF">
+						<input type="text" class="form-control" id="NIF" name="NIF" required>
 					</div>
 
 					<div class="form-group">
 						<label for="Preco">Preco</label>
-						<input type="text" class="form-control" id="Preco" name="Preco">
+						<input type="text" class="form-control" id="Preco" name="Preco" required>
 					</div>
 
 					<button type="submit" class="btn btn-default">Vender</button>
