@@ -42,11 +42,6 @@
 					</div>
 
 					<div class="form-group">
-						<label for="Data">Data</label>
-						<input type="text" class="form-control" id="Data" name="Data">
-					</div>
-
-					<div class="form-group">
 						<label for="Preco">Preco</label>
 						<input type="text" class="form-control" id="Preco" name="Preco">
 					</div>
