@@ -43,12 +43,14 @@ if ($resultado=mysqli_query($ligacao,$SQL))
 echo "fazcompracarros <br />";
 
 $SQL = "insert into Carro values($matricula,$Modelo,$NumLugares,$PrimeiroRegisto,$Cor,$NumPortas,$Tipo,$Potencia,$Combustivel,$Quilometros,$Cilindrada,$preco,false,$ID_Loja,$Marca)";
-$resultado2 = mysqli_query($ligacao,$SQL);
-echo $resultado2;
+if(!($resultado2 = mysqli_query($ligacao,$SQL)))
+    echo "query falhou";
 
 
 $SQL = "insert into CompraCarro values($matricula,$NIF_Client,CURDATE(),$preco)";
-$resultado2 = mysqli_query($ligacao,$SQL);
+if(!($resultado2 = mysqli_query($ligacao,$SQL)))
+    echo "query falhou";
+
 mysqli_close($ligacao);
 echo $resultado2;
 
