@@ -27,7 +27,7 @@
 			echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 
-		$SQL="SELECT * FROM Carro WHERE ID_Marca = '$MarcaCarro' AND Modelo LIKE '$ModeloCarro' AND Tipo LIKE '$TipoCarro' AND Combustivel LIKE '$Combustivel'" ;
+		$SQL="SELECT * FROM Carro WHERE ID_Marca = '$MarcaCarro' AND Modelo LIKE '$ModeloCarro' AND Tipo LIKE '$TipoCarro' AND Combustivel LIKE '$Combustivel' AND Vendido=FALSE" ;
 
 		if ($resultado=mysqli_query($ligacao,$SQL))
 		{
@@ -46,6 +46,7 @@
 				$Quilometros[$i]		= $tuplo["Quilometros"];
 				$Cilindrada[$i] 		= $tuplo["Cilindrada"];
 				$Preco[$i] 				= $tuplo["Preco"];
+				$Vendido[$i]			= $tuplo["Vendido"];
 				$ID_Loja[$i] 			= $tuplo["ID_Loja"];
 				$ID_Marca[$i] 			= $tuplo["ID_Marca"];
 				$i=$i+1;

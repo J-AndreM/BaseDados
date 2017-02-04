@@ -119,7 +119,6 @@
 					
 					<p> <a href="">Comprar</a></p>
 					<p> <a href="">Vender</a></p>
-					<p> <a href="AdicionarCarros.php">Adicionar Carros</a></p>
 					
 				</div>
 			<?php }?>
