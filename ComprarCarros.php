@@ -29,23 +29,84 @@
 			</div>
 
 			<div class="col-sm-4">
-
+			
+			
 				<form action="fazcompracarros.php" method="POST">
 					<div class="form-group">
 						<label for="Matricula">Matricula</label>
 						<input type="text" class="form-control" id="Matricula" name="Matricula" required>
 					</div>
-
+					
 					<div class="form-group">
-						<label for="NIF">NIF</label>
-						<input type="text" class="form-control" id="NIF" name="NIF" required>
+						<label for="Modelo">Modelo</label>
+						<input type="text" class="form-control" id="Modelo" name="Modelo" required>
 					</div>
-
+					
+					<div class="form-group">
+						<label for="NumLugares">NumLugares</label>
+						<input type="text" class="form-control" id="NumLugares" name="NumLugares" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="PrimeiroRegisto">PrimeiroRegisto</label>
+						<input type="text" class="form-control" id="PrimeiroRegisto" name="PrimeiroRegisto" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Cor">Cor</label>
+						<input type="text" class="form-control" id="Cor" name="Cor" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="NumPortas">NumPortas</label>
+						<input type="text" class="form-control" id="NumPortas" name="NumPortas" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Tipo">Tipo</label>
+						<input type="text" class="form-control" id="Tipo" name="Tipo" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Potencia">Potencia</label>
+						<input type="text" class="form-control" id="Potencia" name="Potencia" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Combustivel">Combustivel</label>
+						<input type="text" class="form-control" id="Combustivel" name="Combustivel" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Quilometros">Quilometros</label>
+						<input type="text" class="form-control" id="Quilometros" name="Quilometros" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Cilindrada">Cilindrada</label>
+						<input type="text" class="form-control" id="Cilindrada" name="Cilindrada" required>
+					</div>
+					
 					<div class="form-group">
 						<label for="Preco">Preco</label>
 						<input type="text" class="form-control" id="Preco" name="Preco" required>
 					</div>
-
+					
+					<div class="form-group">
+						<label for="Preco">Preco</label>
+						<input type="text" class="form-control" id="Preco" name="Preco" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="ID_Loja">Loja</label>
+						<input type="text" class="form-control" id="ID_Loja" name="ID_Loja" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="ID_Marca">Marca</label>
+						<input type="text" class="form-control" id="Marca" name="Marca" required>
+					</div>
+					
 					<button type="submit" class="btn btn-default">Comprar</button>
 				</form>  
 			</div>
