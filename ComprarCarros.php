@@ -30,7 +30,7 @@
 
 			<div class="col-sm-4">
 
-				<form action="" method="POST">
+				<form action="fazcompracarros.php" method="POST">
 					<div class="form-group">
 						<label for="Matricula">Matricula</label>
 						<input type="text" class="form-control" id="Matricula" name="Matricula" required>

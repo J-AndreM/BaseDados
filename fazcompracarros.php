@@ -24,7 +24,7 @@ if ($resultado=mysqli_query($ligacao,$SQL))
     }
 }
 
-$SQL = "insert into VendeCarro values($matricula,$NIF_Client,CURDATE(),$preco)";
+$SQL = "insert into CompraCarro values($matricula,$NIF_Client,CURDATE(),$preco)";
 $resultado2 = mysqli_query($ligacao,$SQL);
 mysqli_close($ligacao);
 ?>
