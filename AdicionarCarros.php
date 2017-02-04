@@ -19,7 +19,7 @@
   </head>
   <body>
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-					<a class="navbar-brand" href="#"><center>Adicionar Carros:</center></a>
+					<a class="navbar-brand" href="#AdicionarCarros"><center>Adicionar Carros:</center></a>
 					</div>
 				<div class="container">
 
