@@ -30,8 +30,9 @@
 
 			<div class="col-sm-4">
 			
-			
 				<form action="fazcompracarros.php" method="POST">
+				
+					
 					<div class="form-group">
 						<label for="Matricula">Matricula</label>
 						<input type="text" class="form-control" id="Matricula" name="Matricula" required>
@@ -127,7 +128,7 @@
 						<label for="Morada">Morada do Cliente</label>
 						<input type="text" class="form-control" id="Morada" name="Morada" required>
 					</div>
-					
+				
 					<button type="submit" class="btn btn-default">Comprar</button>
 				</form>  
 			</div>
