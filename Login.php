@@ -117,8 +117,8 @@
 						<strong>Login Succefull!</strong> YES!
 					</div>
 					
-					<p> <a href="">Comprar</a></p>
-					<p> <a href="">Vender</a></p>
+					<p> <a href="Comprar.php">Comprar</a></p>
+					<p> <a href="Vender.php">Vender</a></p>
 					
 				</div>
 			<?php }?>
