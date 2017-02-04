@@ -87,11 +87,7 @@
 						<input type="text" class="form-control" id="Cilindrada" name="Cilindrada" required>
 					</div>
 					
-					<div class="form-group">
-						<label for="Preco">Preco</label>
-						<input type="text" class="form-control" id="Preco" name="Preco" required>
-					</div>
-					
+
 					<div class="form-group">
 						<label for="Preco">Preco</label>
 						<input type="text" class="form-control" id="Preco" name="Preco" required>
