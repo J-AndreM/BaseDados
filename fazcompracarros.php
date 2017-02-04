@@ -19,7 +19,7 @@ if ($resultado=mysqli_query($ligacao,$SQL))
 {
     if(mysqli_num_rows($resultado) == 0)
     {
-        $SQL = "insert into Cliente values($NIF_Client)";
+        $SQL = "insert into Cliente (NIF) values($NIF_Client)";
         $resultado2 = mysqli_query($ligacao,$SQL);
     }
 }
