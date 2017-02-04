@@ -103,6 +103,31 @@
 						<input type="text" class="form-control" id="Marca" name="Marca" required>
 					</div>
 					
+					<div class="form-group">
+						<label for="NIF">NIF do Cliente</label>
+						<input type="text" class="form-control" id="NIF" name="NIF" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Nome">Nome do Cliente</label>
+						<input type="text" class="form-control" id="Nome" name="Nome" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Email">Email do Cliente</label>
+						<input type="text" class="form-control" id="Email" name="Email" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Telefone">Telefone do Cliente</label>
+						<input type="text" class="form-control" id="Telefone" name="Telefone" required>
+					</div>
+					
+					<div class="form-group">
+						<label for="Morada">Morada do Cliente</label>
+						<input type="text" class="form-control" id="Morada" name="Morada" required>
+					</div>
+					
 					<button type="submit" class="btn btn-default">Comprar</button>
 				</form>  
 			</div>
