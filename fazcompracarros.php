@@ -23,6 +23,10 @@ $preco = $_POST["Preco"];
 
 // dados do cliente
 $NIF_Client = $_POST["NIF"];
+$Nome_Cliente= $_POST["Nome"];
+$Email_Cliente= $_POST["Email"];
+$Telefone_Cliente=$_POST["Telefone"];
+$Morada_Cliente=$_POST["Morada"];
 
 
 $ligacao=mysqli_connect($servidor,$username,$password,$basedados) or die( "Não foi possível seleccionar a BD");
@@ -33,7 +37,7 @@ if ($resultado=mysqli_query($ligacao,$SQL))
 {
     if(mysqli_num_rows($resultado) == 0)
     {
-        $SQL = "insert into Cliente (NIF) values($NIF_Client)";
+        $SQL = "insert into Cliente values($NIF_Client,'$Nome_Cliente','$Email_Cliente',$Telefone_Cliente,'$Morada_Cliente')";
         if(!($resultado2 = mysqli_query($ligacao,$SQL)))
             echo "$resultado2: query falhou<br />";
     }
