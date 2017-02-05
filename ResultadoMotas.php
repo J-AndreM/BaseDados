@@ -18,7 +18,7 @@
 		}
 		
 		
-		$SQL="SELECT * FROM Mota WHERE ID_Marca = '$MarcaMota' AND Modelo LIKE '$ModeloMota'";
+		$SQL="SELECT * FROM Mota WHERE ID_Marca = '$MarcaMota' AND Modelo LIKE '$ModeloMota' and Vendida=False";
 		
 		if ($resultado=mysqli_query($ligacao,$SQL))
 		{

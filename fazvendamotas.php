@@ -5,21 +5,12 @@ $password = "2012145811";
 $basedados = "bd_2012145811";
 $servidor = "delta.deec.uc.pt";
 
-// dados do carro
+
+// Dados de Motas
+
 $matricula = $_POST["Matricula"];
-$Modelo = $_POST["Modelo"];
-$NumLugares = $_POST["NumLugares"];
-$PrimeiroRegisto = $_POST["PrimeiroRegisto"];
-$Cor = $_POST["Cor"];
-$NumPortas = $_POST["NumPortas"];
-$Tipo = $_POST["Tipo"];
-$Potencia = $_POST["Potencia"];
-$Combustivel = $_POST["Combustivel"];
-$Quilometros = $_POST["Quilometros"];
-$Cilindrada = $_POST["Cilindrada"];
-$ID_Loja = $_POST["ID_Loja"];
-$Marca = $_POST["Marca"];
 $preco = $_POST["Preco"];
+
 
 // dados do cliente
 $NIF_Client = $_POST["NIF"];
@@ -44,28 +35,24 @@ if ($resultado=mysqli_query($ligacao,$SQL))
 }
 
 
-$SQL = "SELECT * from Carro where Matricula = '$matricula'";
-
+$SQL = "SELECT * from Mota where Matricula = '$matricula' and Vendida='False'";
 if ($resultado=mysqli_query($ligacao,$SQL))
 {
-    if(mysqli_num_rows($resultado) == 0)
+    if(mysqli_num_rows($resultado) == 1)
     {
-		$SQL = "insert into Carro values('$matricula','$Modelo',$NumLugares,$PrimeiroRegisto,'$Cor',$NumPortas,'$Tipo',$Potencia,'$Combustivel',$Quilometros,$Cilindrada,$preco,false,'$ID_Loja','$Marca')";
-		 if(!($resultado2 = mysqli_query($ligacao,$SQL)))
-            echo "$resultado2: query falhou<br />";
-		
-		
+		$SQL ="Update Mota set Vendida=True where Matricula = '$matricula'";
+		if(!($resultado2 = mysqli_query($ligacao,$SQL)))
+			echo "$resultado2: query falhou<br />";
 	}
 }
 
 
-$SQL = "SELECT * from CompraCarro where Matricula = '$matricula'";
-
+$SQL = "SELECT * from VendeMota where Matricula = '$matricula'";
 if ($resultado=mysqli_query($ligacao,$SQL))
 {
     if(mysqli_num_rows($resultado) == 0)
     {
-		 $SQL = "insert into CompraCarro values('$matricula',$NIF_Client,CURDATE(),$preco)";
+		 $SQL = "insert into VendeMota values('$matricula',$NIF_Client,CURDATE(),$preco)";
 		 if(!($resultado3 = mysqli_query($ligacao,$SQL)))
             echo "$resultado3: query falhou<br />";
 		
@@ -73,11 +60,9 @@ if ($resultado=mysqli_query($ligacao,$SQL))
 	}
 }
 
-
 mysqli_close($ligacao);
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -102,7 +87,7 @@ mysqli_close($ligacao);
    
    <div class="container">
 		<div class="jumbotron text-center">
-			<h1>Carro Adicionado</h1>
+			<h1>Mota Vendida</h1>
 			<p> <a href="Login.php">Login</a></p>
 		</div>
 	</div>	
@@ -115,3 +100,7 @@ mysqli_close($ligacao);
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
+
+
+

@@ -61,9 +61,16 @@
 				
 				<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
-						<li class="#Lojas"><a href="Lojas.php">Lojas</a></li>                    
+						<li class="#Lojas"><a href="Lojas.php">Lojas</a></li> 
 						</ul>
 				</div><!--/.nav-collapse -->
+				
+				<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-center">
+				
+				</button>
+				</ul>
+				</div>
 		</div>
 		</div>
 

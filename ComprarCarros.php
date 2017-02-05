@@ -129,7 +129,7 @@
 						<input type="text" class="form-control" id="Morada" name="Morada" required>
 					</div>
 				
-					<button type="submit" class="btn btn-default">Comprar</button>
+					<button type="submit" class="btn btn-default">Efectuar</button>
 				</form>  
 			</div>
 
