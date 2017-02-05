@@ -1,3 +1,16 @@
+<?php
+
+$username = "2012145811";
+$password = "2012145811";
+$basedados = "bd_2012145811";
+$servidor = "delta.deec.uc.pt";
+
+$ligacao=mysqli_connect($servidor,$username,$password,$basedados) or die( "Não foi possível seleccionar a BD");
+
+$SQL = "SELECT * from Extras where CoM =FALSE";
+
+?>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -128,13 +141,29 @@
 						<label for="Morada">Morada do Cliente</label>
 						<input type="text" class="form-control" id="Morada" name="Morada" required>
 					</div>
+						<b>Extras<br /> </b>
+							<?php 
+							if ($resultado=mysqli_query($ligacao,$SQL))
+							{
+								while($tuplo = mysqli_fetch_array($resultado)) {
+									?>
+									<label class="checkbox-inline"><input type="checkbox" name = "" value=""><?php echo $tuplo["Caracteristica"];?> </label>
+							<?php
+								}
+							}
+							else echo"ardeu";
+
+							mysqli_close($ligacao);
+
+							?>
+							<br /><br /><br />
 				
 					<button type="submit" class="btn btn-default">Efectuar</button>
 				</form>  
 			</div>
 
 			<div class="col-sm-4">
-				</div>
+			</div>
 		</div>		
 		
 		

@@ -41,6 +41,7 @@ if ($resultado=mysqli_query($ligacao,$SQL))
         if(!($resultado1 = mysqli_query($ligacao,$SQL)))
             echo "$resultado1: query falhou<br />";
     }
+    else die("cliente ja existe.");
 }
 
 
@@ -56,6 +57,7 @@ if ($resultado=mysqli_query($ligacao,$SQL))
 		
 		
 	}
+  else die("matricula ja existe.");
 }
 
 
