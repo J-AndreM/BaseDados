@@ -1,6 +1,5 @@
 <?php
 
-echo "fazcompracarros <br />";
 $username = "2012145811";
 $password = "2012145811";
 $basedados = "bd_2012145811";
@@ -24,7 +23,6 @@ $preco = $_POST["Preco"];
 
 // dados do cliente
 $NIF_Client = $_POST["NIF"];
-echo "fazcompracarros <br />";
 
 
 $ligacao=mysqli_connect($servidor,$username,$password,$basedados) or die( "Não foi possível seleccionar a BD");
@@ -36,23 +34,21 @@ if ($resultado=mysqli_query($ligacao,$SQL))
     if(mysqli_num_rows($resultado) == 0)
     {
         $SQL = "insert into Cliente (NIF) values($NIF_Client)";
-        $resultado2 = mysqli_query($ligacao,$SQL);
-        echo $resultado2;
+        if(!($resultado2 = mysqli_query($ligacao,$SQL)))
+            echo "$resultado2: query falhou<br />";
     }
 }
-echo "fazcompracarros <br />";
 
-$SQL = "insert into Carro values($matricula,$Modelo,$NumLugares,$PrimeiroRegisto,$Cor,$NumPortas,$Tipo,$Potencia,$Combustivel,$Quilometros,$Cilindrada,$preco,false,$ID_Loja,$Marca)";
-if(!($resultado2 = mysqli_query($ligacao,$SQL)))
-    echo "query falhou";
+$SQL = "insert into Carro values('$matricula','$Modelo',$NumLugares,$PrimeiroRegisto,'$Cor',$NumPortas,'$Tipo',$Potencia,'$Combustivel',$Quilometros,$Cilindrada,$preco,false,'$ID_Loja','$Marca')";
+if(!($resultado3 = mysqli_query($ligacao,$SQL)))
+    echo "$resultado3: query falhou<br />";
 
 
-$SQL = "insert into CompraCarro values($matricula,$NIF_Client,CURDATE(),$preco)";
-if(!($resultado2 = mysqli_query($ligacao,$SQL)))
-    echo "query falhou";
+$SQL = "insert into CompraCarro values('$matricula',$NIF_Client,CURDATE(),$preco)";
+if(!($resultado4 = mysqli_query($ligacao,$SQL)))
+    echo "$resultado4: query falhou<br />";
 
 mysqli_close($ligacao);
-echo $resultado2;
 
 ?>
 
@@ -78,7 +74,6 @@ echo $resultado2;
   </head>
   <body>
     <h1>Hello, world!</h1>
-    <?php echo "fazcompracarros <br />";?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
